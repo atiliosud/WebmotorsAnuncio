@@ -15,7 +15,7 @@ namespace WebmotorsAnuncio.Repositories
         private string _connectionString;
         public AnuncioRepository()
         {
-            string _connectionString = WebConfigurationManager.AppSettings["ConnectionString"];
+            _connectionString = WebConfigurationManager.AppSettings["ConnectionString"];
         }
 
         public SqlConnection OpenDbConnection()

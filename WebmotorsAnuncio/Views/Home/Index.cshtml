@@ -1,24 +1,177 @@
 ﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Gerenciador de Anúncios</h1>
+    <p class="lead">Faça as quatro operações basica.</p>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Incluir</h5>
+                <div class="form-group">
+                    <label for="incluirMarcaID">Marca ID</label>
+                    <input type="number" class="form-control" id="incluirMarcaID">
+                </div>
+                <div class="form-group">
+                    <label for="incluirModeloID">Modelo ID</label>
+                    <input type="number" class="form-control" id="incluirModeloID">
+                </div>
+                <div class="form-group">
+                    <label for="incluirVersaoID">Versão ID</label>
+                    <input type="number" class="form-control" id="incluirVersaoID">
+                </div>
+                <div class="form-group">
+                    <label for="incluirAno">Ano</label>
+                    <input type="number" class="form-control" id="incluirAno">
+                </div>
+                <div class="form-group">
+                    <label for="incluirQuilometragem">Quilometragem</label>
+                    <input type="number" class="form-control" id="incluirQuilometragem">
+                </div>
+                <div class="form-group">
+                    <label for="incluirObservacao">Observação</label>
+                    <textarea type="text" class="form-control" id="incluirObservacao" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" onclick="incluir()">Incluir novo</button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Ver</h5>
+                <div class="form-group">
+                    <label for="editarAnuncioID">Anuncio ID</label>
+                    <input type="number" class="form-control" id="verAnuncioID">
+                </div>
+                <button type="submit" class="btn btn-primary"  onclick="ver()">Buscar</button>
+                <div class="form-group">
+                    <label for="verMarca">Marca</label>
+                    <h4 id="verMarca"></h4>
+                </div>
+                <div class="form-group">
+                    <label for="verModelo">Model</label>
+                    <h4 id="verModelo"></h4>
+                </div>
+                <div class="form-group">
+                    <label for="verVersao">Versão</label>
+                    <h4 id="verVersao"></h4>
+                </div>
+                <div class="form-group">
+                    <label for="verAno">Ano</label>
+                    <h4 id="verAno"></h4>
+                </div>
+                <div class="form-group">
+                    <label for="verQuilometragem">Quilometragem</label>
+                    <h4 id="verQuilometragem"></h4>
+                </div>
+                <div class="form-group">
+                    <label for="verObservacao">Observação</label>
+                    <h4 id="verObservacao"></h4>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Editar</h5>
+                <div class="form-group">
+                    <label for="editarAnuncioID">Anuncio ID</label>
+                    <input type="number" class="form-control" id="editarAnuncioID">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Marca ID</label>
+                    <input type="number" class="form-control" id="editarMarcaID">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Modelo ID</label>
+                    <input type="number" class="form-control" id="editarModeloID">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Versão ID</label>
+                    <input type="number" class="form-control" id="editarVersaoID">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ano</label>
+                    <input type="number" class="form-control" id="editarAno">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Quilometragem</label>
+                    <input type="number" class="form-control" id="editarQuilometragem">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Observação</label>
+                    <textarea type="text" class="form-control" id="editarObservacao" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"  onclick="editar()">Editar</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Excluir</h5>
+                <div class="form-group">
+                    <label for="excluirAnuncioID">Anuncio ID</label>
+                    <input type="number" class="form-control" id="excluirAnuncioID">
+                </div>
+                <button type="submit" class="btn btn-primary"  onclick="excluir()">Excluir</button>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    incluir = () => {
+        $.post("api/Anuncios", {
+            MarcaID: $("#incluirMarcaID").val(),
+            ModeloID: $("#incluirModeloID").val(),
+            VersaoID: $("#incluirVersaoID").val(),
+            Ano: $("#incluirAno").val(),
+            Quilometragem: $("#incluirQuilometragem").val(),
+            Observacao: $("#incluirObservacao").val(),
+        }).done(function (data) {
+            alert("Incluido com sucesso!! " + data);
+        });
+    }
+
+
+    editar = () => {
+
+        $.ajax({
+            url: "api/Anuncios/" + $("#editarAnuncioID").val(),
+            type: 'PUT',
+            data: {
+                MarcaID: $("#editarMarcaID").val(),
+                ModeloID: $("#editarModeloID").val(),
+                VersaoID: $("#editarVersaoID").val(),
+                Ano: $("#editarAno").val(),
+                Quilometragem: $("#editarQuilometragem").val(),
+                Observacao: $("#editarObservacao").val(),
+            },
+            success: () => alert("Editado com sucesso!")
+        });
+    }
+
+
+    ver = () => {
+        $.get("api/Anuncios/" + $("#verAnuncioID").val()).done(function (data) {
+            $("#verMarca").html(data.Marca);
+            $("#verModelo").html(data.Modelo);
+            $("#verVersao").html(data.Versao);
+            $("#verQuilometragem").html(data.Quilometragem);
+            $("#verObservacao").html(data.Observacao);
+            $("#verAno").html(data.Ano);
+        });
+    }
+
+
+    excluir = () => {
+        $.ajax({
+            url: "api/Anuncios/" + $("#excluirAnuncioID").val(),
+            type: 'DELETE',
+            success: ()=> alert("Excluido com sucesso!")
+        });
+    }
+
+</script>

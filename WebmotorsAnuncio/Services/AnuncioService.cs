@@ -27,9 +27,21 @@ namespace WebmotorsAnuncio.Services
         internal AnuncioResponse ConsultarAnuncio(int id)
         {
             var anuncio = _anuncioRepository.Select(id);
+
+            /*
+            var anuncio = new Anuncio()
+            {
+                Ano = 2011,
+                ID = 20,
+                Marca = "1",
+                Modelo = "1",
+                Observacao = " obs",
+                Quilometragem = 111,
+                Versao = "6"
+            };*/
             var marca = _makeClient.GetMakeByID(int.Parse(anuncio.Marca));
             var modelo = _modelClient.GetModelByMakeIDAndID(int.Parse(anuncio.Marca), int.Parse(anuncio.Modelo));
-            var versao = _versionClient.GetVersionByModelIDAndID(int.Parse(anuncio.Modelo), int.Parse(anuncio.Modelo));
+            var versao = _versionClient.GetVersionByModelIDAndID(int.Parse(anuncio.Modelo), int.Parse(anuncio.Versao));
             return new AnuncioResponse()
             {
                 AnuncioID = anuncio.ID,
